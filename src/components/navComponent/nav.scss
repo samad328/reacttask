@@ -1,0 +1,115 @@
+.active{
+    background-color: #c5c5c593;
+    color: #ececee;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ececee;
+    color: rgb(26, 22, 22);
+    top: 0;
+    width: 100%;
+    position: absolute;
+    // background-color: #1d4ed8;
+    top:0;
+    left:0;
+    // width:100%;
+    background:rgba(161, 160, 163, 0.222);
+    // border-radius:0 0 30px 30px;
+    color:white;
+    text-align:center;
+    max-width: 1740px;
+
+    /*Define a height for NavBar*/
+    // height:80px;
+    transition: 0.5s;
+    z-index: 3;
+    /*and a transition time for a smooth appearence*/
+    .title {
+        font-size: 1.5rem;
+        margin: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(22, 19, 19);
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 2rem;
+        span {
+            height: 0.4rem;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 0.2rem;
+        }
+    }
+    
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none; 
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                padding: 0.5rem;
+                margin: 0 0.5rem;
+                border-radius: 0.5rem;
+                &:not(.active):hover {
+                    margin-top: 0.3em;
+                  text-decoration: underline;
+                }
+                
+            }
+         }
+    }
+
+    
+@media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+.menu {
+        display: flex;
+    }
+
+ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+
+        &.open {
+            display: flex;
+            background-color: rgba(157, 157, 157, 0.232);
+        }
+    }
+
+ 
+
+    ul {
+        li {
+            width: 100%;
+            text-align: center;
+            a {
+                margin: 0.2rem 0.5rem;
+            }
+        }
+    }
+
+    
+}
+}
+
+
